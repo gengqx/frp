@@ -13,7 +13,8 @@
           </el-popover>
   
           <el-button v-popover:popover4 type="primary" size="small" icon="view" :name="props.row.name" style="margin-bottom:10px" @click="fetchData2">Traffic Statistics</el-button>
-  
+          <el-button v-popover:popover4 type="primary" size="small" icon="view" :name="props.row.name" style="margin-bottom:50px" @click="fetchData2">Delete Device</el-button>
+    
           <el-form label-position="left" inline class="demo-table-expand">
             <el-form-item label="Name">
               <span>{{ props.row.name }}</span>
@@ -55,15 +56,19 @@
       sortable>
     </el-table-column>
     <el-table-column
-      label="Traffic In"
-      prop="traffic_in"
-      :formatter="formatTrafficIn"
-      sortable>
-    </el-table-column>
-    <el-table-column
       label="Traffic Out"
       prop="traffic_out"
       :formatter="formatTrafficOut"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      label="Last Start"
+      prop="last_start_time"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      label="Last Close"
+      prop="last_close_time"
       sortable>
     </el-table-column>
     <el-table-column
