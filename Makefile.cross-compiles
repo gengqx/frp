@@ -2,7 +2,7 @@ export PATH := $(GOPATH)/bin:$(PATH)
 export GO111MODULE=on
 LDFLAGS := -s -w
 
-os-archs=linux:amd64 linux:386 windows:386 windows:amd64
+os-archs=linux:amd64 linux:386 windows:386 windows:amd64 linux:arm linux:arm64
 
 all: build
 
